@@ -33,6 +33,7 @@ todo write this section!
 [Version.cs](/Assets/Version/Version.cs) - this class implements the actual Version asset as a Unity [ScriptableObject](https://docs.unity3d.com/Manual/class-ScriptableObject.html) It provides a bunch of static accessors that make grabbing version information easy at runtime. Its [OnEnable()](https://github.com/LotteMakesStuff/LMS.Version/blob/main/Assets/Version/Version.cs#L18) and [Initialize()](https://github.com/LotteMakesStuff/LMS.Version/blob/main/Assets/Version/Version.cs#L26) methods are responsible for printing version information into a Player.log file
 
 [VersionDisplay.cs](/Assets/Version/VersionDisplay.cs) & [VersionDisplayTextMeshPro.cs](/Assets/Version/VersionDisplayTextMeshPro.cs) - these components can be used to display version information in a Unity GUI, using either the [inbult text renderer](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html) or [Textmesh Pro](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.2/manual/index.html). The most interesting feature here is the version format string, which can be used to customize how the version text is rendered without changing the underlying code.
+
 ![VersionDisplay inspector](/Docs/VersionDisplay.png)
 
 [BuildNumberTool.cs](/Assets/Version/Editor/BuildNumberTool.cs) - Manages all the pre-build magic, including creating a version asset if one does not exist, incrementing the version number and saving changes to the asset as well as calling into git to find the most recent commit hash.
