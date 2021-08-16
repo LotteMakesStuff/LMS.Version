@@ -15,6 +15,17 @@ namespace LMS.Version
         public string GitHash;
         public string BuildTimestamp;
 
+        [Space]
+        [SerializeField]
+        private bool enableAutoIncrement = true;
+        [SerializeField]
+        private bool enableGitHash = true;
+
+#if UNITY_EDITOR
+        public bool IsAutoIncrementEnabled => enableAutoIncrement;
+        public bool IsUpdateGitHashEnabled => enableGitHash;
+#endif
+
         void OnEnable()
         {
             if (instance != null) return;
