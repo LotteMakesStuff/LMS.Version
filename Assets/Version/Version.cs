@@ -38,6 +38,8 @@ namespace LMS.Version
             if (!Application.isEditor)
             {
                 var logOutput = "--------------------------\n"
+                                + $"-- {Application.productName}\n"
+                                + $"--------------------------\n"
                                 + $"-- Version: {GameVersion}\n"
                                 + $"-- Commit: {GitHash}\n"
                                 + $"-- Built: {BuildTimestamp}\n"

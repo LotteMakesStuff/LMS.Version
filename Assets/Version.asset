@@ -15,12 +15,12 @@ MonoBehaviour:
   GameVersion:
     Major: 1
     Minor: 0
-    Build: 3
+    Build: 6
   extraVersions:
   - VersionName: NetCode
     Version:
       Major: 1
       Minor: 0
       Build: 0
-  GitHash: 12ab34cd
-  BuildTimestamp: 
+  GitHash: 9c99891
+  BuildTimestamp: 2021 August 16 - 10:01
