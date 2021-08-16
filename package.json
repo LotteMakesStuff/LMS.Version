@@ -1,0 +1,10 @@
+{
+	"name": "com.lms.version",
+	"displayName": "Lotte's Versioning System",
+	"description": "A SUPER simple auto build version tool",
+	"version": "0.5.0",
+	"unity": "2018.3",
+	"license": "MIT",
+	"dependencies": {
+ 	}
+}
