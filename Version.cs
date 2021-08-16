@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 namespace LMS.Version
 {
-    [CreateAssetMenu(menuName = "Gunsport/Version", fileName = "Version", order = 0)]
     public class Version : ScriptableObject
     {
         static Version instance;

@@ -2,9 +2,16 @@
 	"name": "com.lms.version",
 	"displayName": "Lotte's Versioning System",
 	"description": "A SUPER simple auto build version tool",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"unity": "2018.3",
 	"license": "MIT",
+	"licensesUrl": "https://github.com/LotteMakesStuff/LMS.Version/blob/main/LICENSE",
+	"changelogUrl": "https://github.com/LotteMakesStuff/LMS.Version/commits/upm",
+	"documentationUrl": "https://github.com/LotteMakesStuff/LMS.Version",
 	"dependencies": {
- 	}
+ 	},
+	"author": {
+		"name" : "Lotte May",
+		"url" : "https://twitter.com/LotteMakesStuff"
+	}
 }
