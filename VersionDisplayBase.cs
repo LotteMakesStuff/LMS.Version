@@ -7,7 +7,7 @@ namespace LMS.Version
 {
     public abstract class VersionDisplayBase : MonoBehaviour
     {
-        [Multiline]
+        [Multiline(4)]
         public string VersionFormatString = "game v{v}\n{gitHash}";
         
         public string GetFormattedString(string format)

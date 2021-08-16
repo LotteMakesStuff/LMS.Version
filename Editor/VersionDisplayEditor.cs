@@ -1,21 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using LMS.Version;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(VersionDisplayBase), true)]
-public class VersionDisplayEditor : Editor
+namespace LMS.Version
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(VersionDisplayBase), true)]
+    public class VersionDisplayEditor : Editor
     {
-        EditorGUILayout.HelpBox("Example format string\ngame v{v}\n{gitHash}\n\ngame v1.2.10\n12ab34cd\n\n" +
-                                "Format codes\n" +
-                                "{v} Main game version \n" +
-                                "{v_} Main game version but with underscores between each number \n" +
-                                "{gitHash} short git commit hash. This is updated from git each time the project is built \n" +
-                                "{time} Build timestamp, this is updated each time the project is built\n" +
-                                "{v:ExtraVersionName} prints a version number taken from the extra versions array.\n", MessageType.Info);
-        base.OnInspectorGUI();
+        public override void OnInspectorGUI()
+        {
+            GUIStyle style = GUI.skin.GetStyle("HelpBox");
+            style.richText = true;
+
+            var guiColor = GUI.contentColor;
+            GUI.enabled = false;
+            GUI.contentColor = guiColor;
+            EditorGUILayout.TextArea("Example format string\ngame <b>v{v}</b>\n<b>{gitHash}</b>", style);
+            EditorGUILayout.TextArea("Output\ngame <b>v1.2.10</b>\n<b>12ab34cd</b>", style);
+            EditorGUILayout.TextArea("Format codes\n" +
+                                     "<b>{v}</b> Main game version \n" +
+                                     "<b>{v_}</b> Main game version but with underscores between each number \n" +
+                                     "<b>{gitHash}</b> short git commit hash. This is updated from git each time the project is built \n" +
+                                     "<b>{time}</b> Build timestamp, this is updated each time the project is built\n" +
+                                     "<b>{v:ExtraVersionName}</b> prints a version number taken from the extra versions array.",
+                style);
+            GUI.enabled = true;
+            base.OnInspectorGUI();
+        }
     }
 }
