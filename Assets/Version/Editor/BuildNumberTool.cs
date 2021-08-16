@@ -38,7 +38,11 @@ namespace LMS.Version
 
 
             var oldVersion = versionAsset.GameVersion.ToString();
-            versionAsset.GameVersion.Build++;
+            if (versionAsset.IsAutoIncrementEnabled)
+            {
+                versionAsset.GameVersion.Build++;
+            }
+
             versionAsset.Initialize();
 
             // Push the version number into Unitys version field. Some console platforms really care about this!
@@ -46,17 +50,21 @@ namespace LMS.Version
             PlayerSettings.bundleVersion = versionAsset.GameVersion.ToString();
 
             // Call into Git
-            string gitHash = "00000000";
-            try
+            if (versionAsset.IsUpdateGitHashEnabled)
             {
-                gitHash = GetGitCommitHash();
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Could not call into git: " + e);
+                string gitHash = "00000000";
+                try
+                {
+                    gitHash = GetGitCommitHash();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError("Could not call into git: " + e);
+                }
+
+                versionAsset.GitHash = gitHash;
             }
 
-            versionAsset.GitHash = gitHash;
             versionAsset.BuildTimestamp = DateTime.UtcNow.ToString("yyyy MMMM dd - HH:mm");
 
             // Save changes
