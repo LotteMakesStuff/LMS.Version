@@ -1,0 +1,15 @@
+{
+    "name": "Lms.Version.Editor",
+    "references": [
+        "GUID:eb16cb87f3cea1a41a99aa6451606fe6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

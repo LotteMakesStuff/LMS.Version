@@ -1,0 +1,71 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+!/[Aa]ssets/**/*.meta
+
+# IDE cache directory
+.vs/
+.idea/
+.gradle/
+
+# IDE generated
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity generated
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+mono_crash*
+sysinfo.txt
+*.stackdump
+*.bin
+
+**/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+**/[Ss]treamingAssets/aa.meta
+**/[Ss]treamingAssets/aa/*
+**/[Ss]treamingAssets/**
+**/[Ss]treamingAssets.meta
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+
+# Blender
+*.blend1
+*.blend11
+
+# OS Specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+#Other
+.~*
