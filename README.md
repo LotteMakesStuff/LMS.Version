@@ -76,4 +76,5 @@ LMS.Versions ships with two UI components, VersionDisplay and VersionDisplayText
 
 ### Coffee
 I hope you find this as useful in your projects as i have in mine! If you find this at all useful, please consider sending me a coffee <3
+
 <img height='46' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
