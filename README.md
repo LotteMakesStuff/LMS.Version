@@ -1,5 +1,6 @@
 # LMS.Version    <a href='https://ko-fi.com/A08215TT' target='_blank'><img height='46' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> <a href='https://www.patreon.com/bePatron?u=7061709' target='_blank'><img height='46' style='border:0px;height:46px;' src='https://c5.patreon.com/external/logo/become_a_patron_button@2x.png' border='0' alt='Become a Patron!' /></a>
 ![Maintenance](https://img.shields.io/maintenance/yes/2021) [![GitHub license](https://img.shields.io/github/license/LotteMakesStuff/LMS.Version)](https://github.com/LotteMakesStuff/SimplePhysicsDemo/blob/master/LICENSE)
+[![openupm](https://img.shields.io/npm/v/com.lms.version?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.lms.version/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/LotteMakesStuff?label=follow&style=social)](https://twitter.com/LotteMakesStuff) ![UnityVersion](https://img.shields.io/badge/made%20with%20unity-2019.4-blue?logo=unity)
 
 ### A SUPER simple auto build version tool
@@ -34,6 +35,9 @@ You can also manually trigger creating the asset in the Project Settings window 
 ![Creating a new Version Asset via the project settings screen](/Docs/ProjectSettingsCreate.png)
 
 Both methods of creating the asset will try and set the initial version number to whatever the value of the version field in Player Settings.
+
+## What if i dont want to install it via a Git URL, for REASONS?
+Ahhh heck. Its also avaible via [OpenUPM](https://openupm.com/packages/com.lms.version/).
 
 ## How does it work?
 At its core, this package implements a Unity build preprocessor, a script that is executed before Unity builds your game. Every time you build your  game, this script opens the version asset and does the following modifications
