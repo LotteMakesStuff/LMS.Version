@@ -22,7 +22,7 @@ Managing a videogames version information can be a MASSIVE pain in the butt - es
 
 Installation is hyper simple! Open up Unity's Package Manager view (Window → Package Manager) and then select the Add Package icon in the top left of the window to add a git package.
 
-The current git install URL is  https://github.com/LotteMakesStuff/LMS.Version.git#1.1.1
+The current git install URL is  https://github.com/LotteMakesStuff/LMS.Version.git#1.1.2
 
 Version information is kept in a Version asset, which needs to be created in your project after installing the package. Theres two simple ways to make the asset
 
