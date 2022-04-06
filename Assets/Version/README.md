@@ -1,5 +1,6 @@
 # LMS.Version    <a href='https://ko-fi.com/A08215TT' target='_blank'><img height='46' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> <a href='https://www.patreon.com/bePatron?u=7061709' target='_blank'><img height='46' style='border:0px;height:46px;' src='https://c5.patreon.com/external/logo/become_a_patron_button@2x.png' border='0' alt='Become a Patron!' /></a>
 ![Maintenance](https://img.shields.io/maintenance/yes/2022) [![GitHub license](https://img.shields.io/github/license/LotteMakesStuff/LMS.Version)](https://github.com/LotteMakesStuff/SimplePhysicsDemo/blob/master/LICENSE)
+[![openupm](https://img.shields.io/npm/v/com.lms.version?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.lms.version/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/LotteMakesStuff?label=follow&style=social)](https://twitter.com/LotteMakesStuff) ![UnityVersion](https://img.shields.io/badge/made%20with%20unity-2019.4-blue?logo=unity)
 
 ### A SUPER simple auto build version tool
@@ -21,7 +22,7 @@ Managing a videogames version information can be a MASSIVE pain in the butt - es
 
 Installation is hyper simple! Open up Unity's Package Manager view (Window → Package Manager) and then select the Add Package icon in the top left of the window to add a git package.
 
-The current git install URL is  https://github.com/LotteMakesStuff/LMS.Version.git#0.6.1
+The current git install URL is  https://github.com/LotteMakesStuff/LMS.Version.git#1.1.0
 
 Version information is kept in a Version asset, which needs to be created in your project after installing the package. Theres two simple ways to make the asset
 
@@ -34,6 +35,9 @@ You can also manually trigger creating the asset in the Project Settings window 
 ![Creating a new Version Asset via the project settings screen](/Documentation~/ProjectSettingsCreate.png)
 
 Both methods of creating the asset will try and set the initial version number to whatever the value of the version field in Player Settings.
+
+## What if i dont want to install it via a Git URL, for REASONS?
+Ahhh heck. Its also avaible via [OpenUPM](https://openupm.com/packages/com.lms.version/).
 
 ## How does it work?
 At its core, this package implements a Unity build preprocessor, a script that is executed before Unity builds your game. Every time you build your  game, this script opens the version asset and does the following modifications
@@ -72,8 +76,9 @@ LMS.Versions ships with two UI components, VersionDisplay and VersionDisplayText
 [BuildNumberTool.cs](/Assets/Version/Editor/BuildNumberTool.cs) - Manages all the pre-build magic, including creating a version asset if one does not exist, incrementing the version number and saving changes to the asset as well as calling into git to find the most recent commit hash.
 
 ## As shipped in
-[![Gunsport](/Documentation~/gunsport.png)](https://gunsport.tv/)
+[![Gunsport](Documentation~/gunsport.png)](https://gunsport.tv/)
 
 ### Coffee
 I hope you find this as useful in your projects as i have in mine! If you find this at all useful, please consider sending me a coffee <3
+
 <img height='46' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
