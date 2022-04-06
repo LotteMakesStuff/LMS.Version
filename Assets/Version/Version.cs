@@ -44,9 +44,13 @@ namespace LMS.Version
                     extraVersion.Version.Initialize();
                 }
             }
-
-            if (!Application.isEditor)
+            
+            
+            if (Application.isEditor)
             {
+                var defaultStaceTraceSetting = Application.GetStackTraceLogType(LogType.Log);
+                Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);
+                
                 var logOutput = "--------------------------\n"
                                 + $"-- {Application.productName}\n"
                                 + $"--------------------------\n"
@@ -55,6 +59,10 @@ namespace LMS.Version
                                 + $"-- Built: {BuildTimestamp}\n"
                                 + "--------------------------";
                 Debug.Log(logOutput);
+                
+#if !DISABLE_LOG_STACKTRACE
+                Application.SetStackTraceLogType(LogType.Log, defaultStaceTraceSetting);
+#endif
             }
         }
 
