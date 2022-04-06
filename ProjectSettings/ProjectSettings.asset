@@ -577,7 +577,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: DISABLE_LOG_STACKTRACE
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

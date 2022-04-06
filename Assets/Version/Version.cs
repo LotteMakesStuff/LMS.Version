@@ -46,7 +46,7 @@ namespace LMS.Version
             }
             
             
-            if (Application.isEditor)
+            if (!Application.isEditor)
             {
                 var defaultStaceTraceSetting = Application.GetStackTraceLogType(LogType.Log);
                 Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);
