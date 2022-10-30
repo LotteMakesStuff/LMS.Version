@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace LMS.Version
 {
@@ -36,16 +35,6 @@ namespace LMS.Version
 
         public void Initialize()
         {
-            GameVersion.Initialize();
-            if (extraVersions != null)
-            {
-                foreach (var extraVersion in extraVersions)
-                {
-                    extraVersion.Version.Initialize();
-                }
-            }
-            
-            
             if (!Application.isEditor)
             {
                 var defaultStaceTraceSetting = Application.GetStackTraceLogType(LogType.Log);
@@ -127,23 +116,26 @@ namespace LMS.Version
         public int Minor;
         public int Build;
 
-        private Dictionary<VersionDeliniator, string> version;
+        public string Version(VersionDeliniator deliniator = VersionDeliniator.Dot)
+        {
+            switch (deliniator)
+            {
+                case VersionDeliniator.Dot:
+                    return $"{Major}.{Minor}.{Build}";
+                case VersionDeliniator.Underscore:
+                    return $"{Major}_{Minor}_{Build}";
+                default:
+                    throw new InvalidEnumArgumentException(nameof(deliniator), (int)deliniator,
+                        typeof(VersionDeliniator));
+            }
+        }
 
-        public string Version(VersionDeliniator deliniator = VersionDeliniator.Dot) => version[deliniator];
-
+        [Obsolete("No longer does anything")]
         public void Initialize()
         {
-            version = new Dictionary<VersionDeliniator, string>()
-            {
-                {VersionDeliniator.Dot, $"{Major}.{Minor}.{Build}"},
-                {VersionDeliniator.Underscore, $"{Major}_{Minor}_{Build}"}
-            };
         }
 
-        public override string ToString()
-        {
-            return version[VersionDeliniator.Dot];
-        }
+        public override string ToString() => Version();
     }
 
     [Serializable]
